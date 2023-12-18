@@ -1,0 +1,29 @@
+
+* {
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: black;
+  background-image: url("confetti-doodles.svg");
+  display: flex;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.header {
+  height: auto;
+  width: 100%;
+  margin: auto;
+}
+
+.header h1 {
+  font-size: 35px;
+  color: white;
+}
+
+
+
