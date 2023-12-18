@@ -9,12 +9,33 @@
 
 body {
   background: black;
-  background-image: url("background.svg");
-  /* background by SVGBackgrounds.com */
   min-height: 100vh;
   text-align: center;
   /* background-color: red; For browsers that do not support gradients */
   /* background-image: linear-gradient(red, yellow, orange); */
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  -webkit-transform: translateX(-100%);
+  transition: translateX(-100%);
+  transition: all 2s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  -webkit-transform: translateX(0);
+  transition: translateX(0);
+}
+
+.card:nth-child(2) {
+  -webkit-transition-delay: 200ms;
+}
+
+.card:nth-child(3) {
+  -webkit-transition-delay: 400ms;
 }
 
 .header {
@@ -24,12 +45,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  background-image: url("confetti-doodles.svg");
+  /* background by SVGBackgrounds.com */
 }
 
 .header h1 {
   font-size: 60px;
-  color: white;
+  color: #FFFF77;
 }
 
 .header-title {

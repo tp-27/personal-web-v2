@@ -23,7 +23,7 @@
         <div class="about-me">
             <div class="about-me-content">
                 <h1>About me</h1>
-                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.</p>
+                <p class="hidden">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.</p>
                 <img src="./headshot.svg" alt="Headshot">
             </div>
         </div>
@@ -33,7 +33,7 @@
                 <div class="timeline-subheader education">
                     <!-- <img src="ellipse.svg" alt="" id="time-marker1"> -->
                     <h1>Education</h1>
-                    <p>I’m currently pursuing my Bachelor of Computing degree at the University of Guelph and will be graduating May 2024 </p>
+                    <p class="hidden">I’m currently pursuing my Bachelor of Computing degree at the University of Guelph and will be graduating May 2024 </p>
                 </div>
                 <div class="timeline-subheader skills">
                     <!-- <img src="ellipse.svg" alt="" id="time-marker1"> -->
@@ -43,18 +43,31 @@
             <div class="timeline-split">
                 <h1>Projects</h1>
                 <div class="card-container">
-                    <div class="card">
+                    <div class="hidden card">
 
                     </div>
-                    <div class="card">
+                    <div class="hidden card">
                         
                     </div>
-                    <div class="card">
+                    <div class="hidden card">
                         
                     </div>
                 </div>
             </div>
         </div>
-        
     </body>
+    <script>
+        // scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) { // is entry intersecting viewport?
+                    entry.target.classList.add('show'); // make entry visible
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll(".hidden");
+        hiddenElements.forEach((el) => observer.observe(el)); // observe all hidden elements
+
+    </script>
 </html>
