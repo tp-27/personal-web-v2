@@ -1,29 +1,153 @@
-
 * {
   color: white;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  
 }
 
 body {
   background: black;
-  background-image: url("confetti-doodles.svg");
-  display: flex;
+  background-image: url("background.svg");
+  /* background by SVGBackgrounds.com */
   min-height: 100vh;
   text-align: center;
+  /* background-color: red; For browsers that do not support gradients */
+  /* background-image: linear-gradient(red, yellow, orange); */
 }
 
 .header {
-  height: auto;
+  /* border: 2px solid red; */
+  min-height: 100vh;
   width: 100%;
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .header h1 {
-  font-size: 35px;
+  font-size: 60px;
   color: white;
 }
 
+.header-title {
+  height: 100%;
+  width: 60%;
+  text-align: left;
+  margin-top: 50px;
+  /* border: 2px solid blue; */
+}
 
+#resume {
+  margin-top: 15px;
+  height: 55px;
+  width: 180px;
+  background-color: #fff;
+  border-radius: 20px;
+  border: none;
+  font-size: 15px;
+  color: black;
+  font-weight: 500;
+}
 
+#resume:hover {
+  background-color: #FFFF77;
+  font-weight: 700;
+}
+
+.about-me {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me-content {
+  height: 100%;
+  width: 60%;
+  text-align: left;
+}
+
+.about-me-content img {
+  margin-top: 80px;
+  height: 30%;
+  width: 30%;
+  border-radius: 50%;
+}
+
+.timeline-container {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid blue; */
+}
+
+.timeline {
+  margin-top: -6px;
+  border-left: 3px solid rgba(255, 255, 255, 0.452);
+  height: 500px;
+  width: 42%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+#time-marker1 {
+  position: absolute;
+  top: 1275px;
+  left: 211px;
+  bottom: 0;
+  height: auto;
+  width: 20px;
+}
+
+.timeline-subheader {
+  margin-top: 150px;
+  margin-left: 50px;
+  color: white;
+}
+
+.education h1 {
+  padding-bottom: 10px;
+}
+
+.education p {
+  color: white
+}
+
+.timeline-split {
+  height: auto;
+  width: 100%;
+  /* border: 2px solid red; */
+  justify-self: center;
+}
+
+.timeline-split h1 {
+  width: 40%;
+  /* border: 2px solid yellow; */
+}
+
+.card-container {
+  height: 500px;
+  width: 100%;
+  justify-content: center;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding-top: 50px;
+}
+
+.card {
+  height: 300px;
+  width: 300px;
+  border-radius: 20px;
+  background-color: white;
+}
