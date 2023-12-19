@@ -8,12 +8,105 @@
 }
 
 body {
-  background: rgba(0, 0, 0, 0.818);
+  background: #121212;
   min-height: 100vh;
   text-align: center;
   /* background-color: red; For browsers that do not support gradients */
   /* background-image: linear-gradient(red, yellow, orange); */
 }
+
+
+
+/******** Navigation ********/
+nav {
+  width: 100%;
+  height: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 40px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+  /* border: 2px solid red; */
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  display: inline-block;
+  height: 45px;
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+.nav-item a {
+  padding: 5px 10px;
+}
+
+.nav-item a:hover {
+  background: rgba(255, 255, 255, 0.462);
+}
+
+.sidebar-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.438);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+#close-icon {
+  justify-self: flex-end;
+}
+
+#menu-icon {
+  background: rgba(255, 255, 255, 0.2);
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  border-radius: 100px;
+  line-height: 60px;
+  display: none;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff3d;
+}
+
+.sticky + .about-me {
+  padding-top: 60px;
+}
+
 
 #line {
   position: absolute;
@@ -49,7 +142,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("confetti-doodles.svg");
+  /* background-image: url("confetti-doodles.svg"); */
   /* background by SVGBackgrounds.com */
 }
 
@@ -258,3 +351,13 @@ body {
   transition-delay: 0s;
   -webkit-transition-delay: 0s;
 } */
+
+@media(max-width: 890px) {
+  .hideOnMobile {
+      display: none;
+  }
+
+  #menu-icon {
+      display: inline-block;
+  }
+}

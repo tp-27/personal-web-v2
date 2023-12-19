@@ -12,6 +12,28 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap" rel="stylesheet">
     </head>
     <body>
+        <nav>
+            <ul class="sidebar-nav">
+                <li onclick="NavModule.closeMenu()"><img src="close.svg" alt="Close icon" id="close-icon"></li>
+                <li class="nav-item"><a href="/">Home</a></li>
+                <li class="nav-item"><a href="/">Sign Up</a></li>
+                <li class="nav-item"><a href="/">About</a></li>
+                <li class="nav-item"><a href="/">Contact</a></li>
+                <li class="nav-item"><a href="/">Get Started</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="/" id="logo">TripPlanner</a></li>
+                <li class="nav-item hideOnMobile"><a href="/">Home</a></li>
+                <li class="nav-item hideOnMobile"><a href="/">Sign Up</a></li>
+                <li class="nav-item hideOnMobile"><a href="/">About</a></li>
+                <li class="nav-item hideOnMobile"><a href="/">Contact</a></li>
+                <li class="nav-item hideOnMobile"><a class="action-btn">Get Started</a></li>
+                <li id="menu-icon" onclick="NavModule.showMenu()"><img src="menu.svg" alt="Menu icon"></li>
+            </ul>
+        </nav>
+
+
         <div class="header">
             <div class="header-title">
                 <h1>Hi I'm Thomas</h1>
@@ -143,6 +165,24 @@
                 }
             })
         });
+
+        // When the user scrolls the page, execute myFunction 
+        window.onscroll = function() {myFunction()};
+
+        // Get the navbar
+        var navbar = document.querySelector("nav");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
 
     </script>
 </html>
