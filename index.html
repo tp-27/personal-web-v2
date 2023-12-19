@@ -48,20 +48,56 @@
 
                 <div class="timeline-subheader experience">
                     <h1>Experience</h1>
+                    <div class="exp-card">
+                        <div class="exp-card-header">
+                            <img class="expand-arrow" src="arrow-down.svg" alt="Circle with down arrow">
+                            <img class="collapse-arrow" src="arrow-up.svg" alt="Circle with up arrow">
+                            <!-- <img src="./guelph.svg" alt="University of Guelph logo" id="guelph"> -->
+                            <h2>CIS*1500 Teaching Assistant</h2>
+                        </div>
+                       
+                        <p class="exp-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.</p>
+                    </div>
+
+                    <div class="exp-card">
+                        <div class="exp-card-header">
+                            <img class="expand-arrow" src="arrow-down.svg" alt="Circle with down arrow">
+                            <img class="collapse-arrow" src="arrow-up.svg" alt="Circle with up arrow">
+                            <!-- <img src="./guelph.svg" alt="University of Guelph logo" id="guelph"> -->
+                            <h2>Research Assistant</h2>
+                            
+                        </div>
+                        
+                        <p class="exp-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.</p>
+
+                    </div>
+
+                    <div class="exp-card">
+                        <div class="exp-card-header">
+                            <img class="expand-arrow" src="arrow-down.svg" alt="Circle with down arrow">
+                            <img class="collapse-arrow" src="arrow-up.svg" alt="Circle with up arrow">
+                            <!-- <img src="./chalmers.svg" alt="University of Guelph logo" id="guelph"> -->
+                            <h2>WordPress Developer</h2>
+                            
+                        </div>
+                        
+                        <p class="exp-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.</p>
+
+                    </div>
                 </div>
 
             </div>
             <div class="timeline-split">
                 <h1>Projects</h1>
                 <div class="card-container">
-                    <div class="hidden card">
-
+                    <div class="hidden card" id="tent">
+                        <img src="camping.svg" alt="">
                     </div>
-                    <div class="hidden card">
-                        
+                    <div class="hidden card" id="nccer">
+                        <img src="nccer.svg" alt="">
                     </div>
-                    <div class="hidden card">
-                        
+                    <div class="hidden card" id="aed">
+                        <img src="aed.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -73,12 +109,40 @@
             entries.forEach((entry) => {
                 if (entry.isIntersecting) { // is entry intersecting viewport?
                     entry.target.classList.add('show'); // make entry visible
-                }
+                    // entry.style.transition = "none";
+                    // entry.style.WebkitTransition = "none";
+                } 
             });
         });
 
         const hiddenElements = document.querySelectorAll(".hidden");
         hiddenElements.forEach((el) => observer.observe(el)); // observe all hidden elements
+
+        var expCardHeader = document.querySelectorAll(".exp-card-header");
+
+        expCardHeader.forEach(function(header) {
+            header.addEventListener("click", function () {
+                const siblingElement = header.nextElementSibling; // get paragraph tag 
+                const display = siblingElement.style.display;
+
+                if (display === "none") {
+                    siblingElement.style.display = "block"; // show paragraph
+                    var expandArrow = header.querySelector(".expand-arrow");
+                    expandArrow.style.display = "none"; // remove expand arrow
+
+                    var collapseArrow = document.querySelector(".collapse-arrow");
+                    collapseArrow.style.display = "block"; // show collapse arrow
+
+                } else {
+                    siblingElement.style.display = "none"; // remove paragraph
+                    var expandArrow = header.querySelector(".expand-arrow");
+                    expandArrow.style.display = "block"; // show expand arrow
+
+                    var collapseArrow = header.querySelector(".collapse-arrow");
+                    collapseArrow.style.display = "none"; // remove collapse arrow
+                }
+            })
+        });
 
     </script>
 </html>
