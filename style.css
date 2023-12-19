@@ -8,7 +8,7 @@
 }
 
 body {
-  background: black;
+  background: rgba(0, 0, 0, 0.818);
   min-height: 100vh;
   text-align: center;
   /* background-color: red; For browsers that do not support gradients */
