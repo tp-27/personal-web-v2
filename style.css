@@ -18,13 +18,23 @@ body {
 
 
 /******** Navigation ********/
-nav {
+.nav {
   width: 100%;
   height: 100px;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 40px;
+  transition: 0.6s;
+  background-color: #222222;
+  -webkit-transition: background-color 500ms;
+  position: sticky;
+  top: 0;
 }
+
+/* .sticking {
+  background-color: #ffffff84;
+} */
+
 
 nav ul {
   display: flex;
@@ -57,6 +67,7 @@ nav li:first-child {
 
 .nav-item a {
   padding: 5px 10px;
+  overflow-y: hidden;
 }
 
 .nav-item a:hover {
@@ -96,18 +107,6 @@ nav li:first-child {
   display: none;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #ffffff3d;
-}
-
-.sticky + .about-me {
-  padding-top: 60px;
-}
-
-
 #line {
   position: absolute;
 }
@@ -142,6 +141,7 @@ nav li:first-child {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #222222;
   /* background-image: url("confetti-doodles.svg"); */
   /* background by SVGBackgrounds.com */
 }
@@ -174,6 +174,51 @@ nav li:first-child {
 #resume:hover {
   background-color: #FFFF77;
   font-weight: 700;
+}
+
+
+.header2 {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  width: 50%;
+  background-color:  #222222;
+}
+
+.left img {
+  height: auto;
+  width: 300px;
+}
+
+.right {
+  padding-left: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  color: #222222;
+  min-height: 100%;
+  width: 50%;
+  background-color:  #F3F3F3;
+}
+
+.right h1 {
+  color: black;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+.right p {
+  text-align: left;
+  color: #222222;
+  width: 80%;
 }
 
 .about-me {
