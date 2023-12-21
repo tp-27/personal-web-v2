@@ -385,7 +385,7 @@ nav a:first-child {
   margin-top: 100px;
   margin-left: 100px;
   height: auto;
-  width: 100%;
+  width: 85%;
   /* border: 2px solid red; */
   display: flex;
   flex-direction: column;
@@ -426,8 +426,16 @@ nav a:first-child {
   width: 250px;
 }
 
-#tent {
+.proj-content {
+  height: 500px;
+  width: 100%;
+  border-radius: 20px;
   background-color:#09151c;
+  display: none;
+}
+
+#tent {
+  background-color: #314B40;
 }
 
 #nccer {
@@ -437,6 +445,40 @@ nav a:first-child {
 #nccer img {
   width: 400px;
 }
+
+.layer {
+  background: transparent;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 0.5s;  
+  text-align: center;
+}
+
+.layer:hover {
+	background:#ebe7d9d4;
+}
+
+.layer h3{
+	width: 80%;
+	font-weight: 500;
+	color: black;
+	font-size: 26px;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	position: absolute;
+	opacity: 0;
+	transition: 0.5s;
+  margin: auto;
+}
+
+.layer:hover h3 {
+	bottom: 49%;
+	opacity: 1;
+} 
 
 /* 
 .card:hover {
