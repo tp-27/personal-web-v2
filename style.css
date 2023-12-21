@@ -1,5 +1,4 @@
 * {
-  color: white;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,9 +7,10 @@
 }
 
 body {
-  background-color: #222222b7;
   min-height: 100vh;
   text-align: center;
+  background-color: #0F222D;
+  color:#EBE7D9;
   /* background-color: red; For browsers that do not support gradients */
   /* background-image: linear-gradient(red, yellow, orange); */
 }
@@ -20,12 +20,11 @@ body {
 /******** Navigation ********/
 .nav {
   width: 100%;
-  height: 100px;
+  height: auto;
   padding-left: 50px;
   padding-right: 50px;
-  padding-top: 40px;
+  padding-top: 25px;
   transition: 0.6s;
-  background-color: #222222;
   -webkit-transition: background-color 500ms;
   position: sticky;
   top: 0;
@@ -61,7 +60,7 @@ nav ul li a {
   border-radius: 20px;
 }
 
-nav li:first-child {
+nav a:first-child {
   margin-right: auto;
 }
 
@@ -135,91 +134,40 @@ nav li:first-child {
 }
 
 .header {
-  /* border: 2px solid red; */
   min-height: 100vh;
   width: 100%;
+  margin-top: -50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #222222;
-  /* background-image: url("confetti-doodles.svg"); */
-  /* background by SVGBackgrounds.com */
 }
 
 .header h1 {
   font-size: 60px;
-  color: #FFFF77;
+  color: #EBE7D9;
 }
 
 .header-title {
   height: 100%;
   width: 60%;
   text-align: left;
-  margin-top: 50px;
   /* border: 2px solid blue; */
 }
 
 #resume {
-  margin-top: 15px;
   height: 55px;
   width: 180px;
-  background-color: #222222;
+  background-color: #F55139;
   border-radius: 20px;
   border: none;
   font-size: 15px;
   color: #F3F3F3;
-  font-weight: 500;
-}
-
-#resume:hover {
-  background-color: #222222b7;
   font-weight: 700;
 }
 
-
-.header2 {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-}
-
-.left {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100%;
-  width: 50%;
-  background-color:  #222222;
-}
-
-.left img {
-  height: auto;
-  width: 300px;
-}
-
-.right {
-  padding-left: 125px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  color: #222222;
-  min-height: 100%;
-  width: 50%;
-  background-color:  #F3F3F3;
-}
-
-.right h1 {
-  color: black;
-  font-weight: 600;
-  padding-bottom: 25px;
-}
-
-.right p {
-  text-align: left;
-  color: #222222;
-  width: 80%;
-  padding-bottom: 20px;
+#resume:hover {
+  background-color: #f55239ac;
+  font-weight: 700;
 }
 
 .about-me {
@@ -239,6 +187,7 @@ nav li:first-child {
 
 .about-me-content h1 {
   padding-bottom: 20px;
+  color: #F55139;
 }
 
 .about-me-content p {
@@ -264,7 +213,7 @@ nav li:first-child {
 }
 
 .timeline {
-  margin-left: 840px;
+  margin-left: 650px;
   border-left: 3px solid rgba(255, 255, 255, 0.452);
   height: auto;
   border-right: 2px solid red;
@@ -275,9 +224,9 @@ nav li:first-child {
   text-align: left;
 }
 
-.timeline-subheader p {
+/* .timeline-subheader p {
   width: 90%;
-}
+} */
 
 .timeline-subheader h2 {
   font-weight: 500;
@@ -297,14 +246,102 @@ nav li:first-child {
   height: auto;
   margin-top: 150px;
   margin-left: 50px;
+  /* border: 2px solid red; */
 }
 
 .education h1 {
   padding-bottom: 10px;
 }
 
-.education p {
-  color: white;
+.education-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 50px;
+  color:#F55139;
+}
+
+.highlights h3 {
+  font-weight: 500;
+}
+
+.highlight-subheading {
+  height: 80px;
+  width: 100%;
+  background-color:#09141a;
+  border-radius: 20px;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  color:#F55139;
+}
+
+.highlight-subheading:hover {
+  background-color:#F55139;
+  color:#EBE7D9;
+}
+
+.highlight-end {
+  display: flex;
+  gap: 15px;
+}
+
+#academic {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+
+
+.skills h2 {
+  padding-top: 15px;
+}
+
+.skills ul li {
+  background-color:#09151c;
+  padding: 5px;
+}
+
+.skills ul {
+  width: 100%;
+  /* border: 2px solid red; */
+  padding-left: 10px;
+}
+
+
+.skills ul li img {
+  height: auto;
+  width: 60px;
+  background-color:#09151c;
+  padding-bottom: 0;
+}
+
+.skills .code-icons {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.skills .code-icons div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  background-color:#09151c;
+  border-radius: 20px;
+  overflow-y: hidden;
+}
+
+.skills .code-icons div:hover {
+  transform: scale(1.1);
 }
 
 .exp-card {

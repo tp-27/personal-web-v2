@@ -7,12 +7,13 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <!-- <nav class="nav">
+        <nav class="nav">
             <ul class="sidebar-nav">
                 <li onclick="NavModule.closeMenu()"><img src="close.svg" alt="Close icon" id="close-icon"></li>
                 <li class="nav-item"><a href="/">Home</a></li>
@@ -22,37 +23,27 @@
                 <li class="nav-item"><a href="/">Get Started</a></li>
             </ul>
 
+        
             <ul>
-                <li><a href="/" id="logo">TripPlanner</a></li>
+                <a href="/" id="logo"><img src="./logo.svg" alt=""></a>
                 <li class="nav-item hideOnMobile"><a href="/">Home</a></li>
                 <li class="nav-item hideOnMobile"><a href="/">Sign Up</a></li>
                 <li class="nav-item hideOnMobile"><a href="/">About</a></li>
                 <li class="nav-item hideOnMobile"><a href="/">Contact</a></li>
-                <li class="nav-item hideOnMobile"><a class="action-btn">Get Started</a></li>
+                <li class="nav-item hideOnMobile"><button id="resume">Resume</button></li>
                 <li id="menu-icon" onclick="NavModule.showMenu()"><img src="menu.svg" alt="Menu icon"></li>
             </ul>
-        </nav> -->
+            </div>
+        </nav>
 
 
-        <!-- <div class="header">
+        <div class="header">
             <div class="header-title">
-                <h1>Hi I'm Thomas</h1>
+                <h1>Hi I'm <span style="color: #F55139;">Thomas</span>,</h1>
                 <h1>A Software Developer</h1>
-                <button id="resume">Resume</button>
-            </div>
-        </div> -->
-
-        <div class="header2">
-            <div class="left">
-                <img src="./logo.svg" alt="">
-            </div>
-            <div class="right">
-                <h1>Hi there</h1>
-                <p class="">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.</p>
-                <button id="resume">Resume</button>
+                <!-- <button id="resume">Resume</button> -->
             </div>
         </div>
-
 
         <div class="about-me">
             <div class="about-me-content">
@@ -69,18 +60,86 @@
                 <div class="timeline-subheader skills">
                     <!-- <img src="ellipse.svg" alt="" id="time-marker1"> -->
                     <h1>Skills</h1>
-                    <h2>Languages: JavaScript, Python, SQL, C, Java, Swift, HTML/CSS</h2>
-                    <h2>Tools: Git, Docker, Postman, Github, Google Cloud, WordPress</h2>
+                    <h2>Languages</h2>
+                    <ul class="hidden code-icons">
+                        <div><li><img src="javascript.svg" alt=""></li></div>
+                        <div><li><img src="python.svg" alt=""></li></div>
+                        <div><li><img src="java.svg" alt="" style="width: 45px;"></li></div>
+                        <div><li><img src="postgresql.svg" alt=""></li></div>
+                        <div><li><img src="html-5.svg" alt=""></li></div>
+                        <div><li><img src="css-3.svg" alt=""></li></div>
+                    </ul>
+
+                    <h2>Tools</h2>
+                    <ul class="hidden code-icons">
+                        <div><li><img src="git-icon.svg" alt=""></li></div>
+                        <div><li><img src="github-icon.svg" alt=""></li></div>
+                        <div><li><img src="docker-icon.svg" alt=""></li></div>
+                        <div><li><img src="figma.svg" alt="" style="width: 45px;"></li></div>
+                        <div><li><img src="postman-icon.svg" alt=""></li></div>
+                    </ul>
+
                 </div>
 
                 <div class="timeline-subheader education">
                     <!-- <img src="ellipse.svg" alt="" id="time-marker1"> -->
                     <h1>Education</h1>
-                    <p class="hidden">I’m currently pursuing my Bachelor of Computing degree at the University of Guelph and will be graduating May 2024 </p>
+                    <h2>Bachelor of Computing | Computer Science</h2>
+                    <div class="education-header">
+                        <h2>University of Guelph</h2>
+                        <p>Graduating April 2024</p>
+                    </div>
+
+                    <div class="highlights">
+                        <h3>Highlights</h3>
+                        <div class="highlight-subheading" id="academic">
+                            <p>Academic</p>
+                            <img class="expand-arrow" src="arrow-down.svg" alt="Circle with down arrow">
+                        </div>
+                        <div class="highlight-subheading" id="extracurricular">
+                            <p>Extracurricular</p>
+                            <img class="expand-arrow" src="arrow-down.svg" alt="Circle with down arrow">
+                        </div>
+                    </div>
+                  
+                    <p class="hidden"></p>
                 </div>
 
                 <div class="timeline-subheader experience">
                     <h1>Experience</h1>
+
+                    <div class="highlights">
+                        <div class="highlight-subheading" id="academic">
+                            <p>WordPress Developer</p>
+                            <div class="highlight-end">
+                                <p class="highlight-date">Jan 2024 - Present</p>
+                                <img class="expand-arrow" src="arrow-down.svg" alt="Circle with down arrow">
+                            </div>
+                        </div>
+                        <div class="highlight-subheading" id="academic">
+                            <p>Freelance Web Developer</p>
+                            <div class="highlight-end">
+                                <p class="highlight-date">Oct 2024 - Dec 2024</p>
+                                <img class="expand-arrow" src="arrow-down.svg" alt="Circle with down arrow">
+                            </div>
+                           
+                        </div>
+                        <div class="highlight-subheading" id="academic">
+                            <p>Teaching Assistant</p>
+                            <div class="highlight-end">
+                                <p class="highlight-date">Sept 2024 - Dec 2024</p>
+                                <img class="expand-arrow" src="arrow-down.svg" alt="Circle with down arrow">
+                            </div>
+                        </div>
+                        <div class="highlight-subheading" id="extracurricular">
+                            <p>Research Assistant</p>
+                            <div class="highlight-end">
+                                <p class="highlight-date">May 2024 - Sept 2024</p>
+                                <img class="expand-arrow" src="arrow-down.svg" alt="Circle with down arrow">
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="exp-card">
                         <div class="exp-card-header">
                             <img class="expand-arrow" src="arrow-down.svg" alt="Circle with down arrow">
