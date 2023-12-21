@@ -174,6 +174,7 @@ nav a:first-child {
   height: auto;
   width: 100%;
   margin-top: 150px;
+  margin-bottom: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,7 +188,6 @@ nav a:first-child {
 
 .about-me-content h1 {
   padding-bottom: 20px;
-  color: #F55139;
 }
 
 .about-me-content p {
@@ -195,10 +195,10 @@ nav a:first-child {
   color: #f3f3f3;
 }
 
-.about-me-content img {
+#headshot {
   margin-top: 80px;
-  height: 30%;
-  width: 30%;
+  height: 280px;
+  width: 280px;
   border-radius: 50%;
 }
 
@@ -427,7 +427,7 @@ nav a:first-child {
 }
 
 #tent {
-  background-color: #314B40;
+  background-color:#09151c;
 }
 
 #nccer {
