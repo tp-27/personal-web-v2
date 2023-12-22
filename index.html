@@ -16,7 +16,7 @@
         <nav class="nav">
             <ul class="sidebar-nav">
                 <li onclick="NavModule.closeMenu()"><img src="close.svg" alt="Close icon" id="close-icon"></li>
-                <li class="nav-item"><a href="/">Home</a></li>
+                <li class="nav-item"><a href="">Home</a></li>
                 <li class="nav-item"><a href="/">Sign Up</a></li>
                 <li class="nav-item"><a href="/">About</a></li>
                 <li class="nav-item"><a href="/">Contact</a></li>
@@ -26,10 +26,11 @@
         
             <ul>
                 <a href="/" id="logo"><img src="./logo.svg" alt=""></a>
-                <li class="nav-item hideOnMobile"><a href="/">Home</a></li>
-                <li class="nav-item hideOnMobile"><a href="/">Sign Up</a></li>
-                <li class="nav-item hideOnMobile"><a href="/">About</a></li>
-                <li class="nav-item hideOnMobile"><a href="/">Contact</a></li>
+                <li class="nav-item hideOnMobile"><a href="#about">About</a></li>
+                <li class="nav-item hideOnMobile"><a href="#skills">Skills</a></li>
+                <li class="nav-item hideOnMobile"><a href="#educate">Education</a></li>
+                <li class="nav-item hideOnMobile"><a href="#experience">Experience</a></li>
+                <li class="nav-item hideOnMobile"><a href="#projects">Projects</a></li>
                 <li class="nav-item hideOnMobile"><button id="resume">Resume</button></li>
                 <li id="menu-icon" onclick="NavModule.showMenu()"><img src="menu.svg" alt="Menu icon"></li>
             </ul>
@@ -46,7 +47,7 @@
 
         <img src="./headshot.svg" alt="Headshot" id="headshot">
 
-        <div class="about-me">
+        <div class="about-me" id="about">
             <div class="about-me-content">
                 <h1>About me</h1>
                 <p class="hidden">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.</p>
@@ -57,7 +58,7 @@
             <div class="timeline">
                 <div class="timeline-subheader skills">
                     <!-- <img src="ellipse.svg" alt="" id="time-marker1"> -->
-                    <h1>Skills</h1>
+                    <h1 id="skills">Skills</h1>
                     <h2>Languages</h2>
                     <ul class="hidden code-icons">
                         <div><li><img src="javascript.svg" alt=""></li></div>
@@ -81,18 +82,25 @@
 
                 <div class="timeline-subheader education">
                     <!-- <img src="ellipse.svg" alt="" id="time-marker1"> -->
-                    <h1>Education</h1>
-                    <h2>Bachelor of Computing | Computer Science</h2>
+                    <h1 id="educate">Education</h1>
                     <div class="education-header">
                         <h2>University of Guelph</h2>
                         <p>Graduating April 2024</p>
                     </div>
+                    <p id="degree">Bachelor of Computing in Computer Science</p>
 
                     <div class="highlights">
                         <h3>Highlights</h3>
                         <div class="highlight-subheading" id="academic">
-                            <p>Academic</p>
-                            <img class="expand-arrow" src="arrow-down.svg" alt="Circle with down arrow">
+                            <div class="highlight-title">
+                                <p>Academic</p>
+                                <img class="expand-arrow" src="arrow-down.svg" alt="Circle with down arrow">
+                            </div>
+
+                            <div class="highlight-content">
+                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.</p>
+                            </div>
+                           
                         </div>
                         <div class="highlight-subheading" id="extracurricular">
                             <p>Extracurricular</p>
@@ -100,11 +108,11 @@
                         </div>
                     </div>
                   
-                    <p class="hidden"></p>
+                
                 </div>
 
                 <div class="timeline-subheader experience">
-                    <h1>Experience</h1>
+                    <h1 id="experience">Experience</h1>
 
                     <div class="highlights">
                         <div class="highlight-subheading" id="academic">
@@ -141,7 +149,7 @@
 
             </div>
             <div class="timeline-split">
-                <h1>Projects</h1>
+                <h1 id="projects">Projects</h1>
                 <div class="card-container">
                     <div class="hidden card" id="tent">
                         <img src="camping.svg" alt="">
@@ -226,10 +234,34 @@
 
         navObserver.observe(scrollWatcher);
 
-        
-        
+        const dropdownInfoBtn = document.querySelectorAll(".highlight-subheading");
+            
+        dropdownInfoBtn.forEach(function(dropdown) {
+            dropdown.addEventListener('click', function() {
+                if (dropdown.style.height != "80px") {
+                    dropdown.style.height = "80px";
+                    dropdown.style.alignItems = "center";
+                    const content = dropdown.querySelector(".highlight-content");
+                    content.style.display = "none";
+                } else {
+                    dropdown.style.height = "auto";
+                    dropdown.style.alignItems = "flex-start";
 
-        
+                    // dropdown.style.paddingTop = "25px";
+
+                    const content = dropdown.querySelector(".highlight-content");
+                    content.style.display = "block";
+                    content.style.paddingTop = "50px";
+                    content.style.paddingBottom = "25px";
+
+                }
+
+
+            });
+        });
+
+
+    
 
     </script>
 </html>

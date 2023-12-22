@@ -40,7 +40,7 @@ nav ul {
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  gap: 30px;
+  gap: 20px;
   /* border: 2px solid red; */
 }
 
@@ -173,7 +173,7 @@ nav a:first-child {
 .about-me {
   height: auto;
   width: 100%;
-  margin-top: 150px;
+  margin-top: 100px;
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
@@ -213,7 +213,7 @@ nav a:first-child {
 }
 
 .timeline {
-  margin-left: 650px;
+  margin-left: 590px;
   border-left: 3px solid rgba(255, 255, 255, 0.452);
   height: auto;
   border-right: 2px solid red;
@@ -232,21 +232,16 @@ nav a:first-child {
   font-weight: 500;
 }
 
-#time-marker1 {
-  position: absolute;
-  top: 1275px;
-  left: 211px;
-  bottom: 0;
-  height: auto;
-  width: 20px;
-}
-
 .timeline-subheader {
   width: 60%;
   height: auto;
   margin-top: 150px;
   margin-left: 50px;
   /* border: 2px solid red; */
+}
+
+.skills {
+  margin-top: 80px;
 }
 
 .education h1 {
@@ -259,9 +254,18 @@ nav a:first-child {
   justify-content: space-between;
   align-items: center;
   margin-top: 5px;
-  margin-bottom: 50px;
   color:#F55139;
+  /* border: 2px solid red; */
 }
+
+#degree {
+  font-size: 20px;
+  padding-bottom: 50px;
+}
+
+
+
+
 
 .highlights h3 {
   font-weight: 500;
@@ -274,11 +278,25 @@ nav a:first-child {
   border-radius: 20px;
   /* border: 2px solid red; */
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding-left: 30px;
   padding-right: 30px;
   color:#F55139;
+}
+
+.highlight-title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+
+}
+
+.highlight-content {
+  display: none;
 }
 
 .highlight-subheading:hover {
@@ -419,11 +437,18 @@ nav a:first-child {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .card img {
   height: auto;
   width: 250px;
+}
+
+.card-btns {
+  height: 30%;
+  width: 100%;
+  background-color: #fff;
 }
 
 .proj-content {
