@@ -155,6 +155,7 @@ nav a:first-child {
 }
 
 #resume {
+  text-align: center;
   height: 55px;
   width: 180px;
   background-color: #F55139;
@@ -298,6 +299,12 @@ nav a:first-child {
 .highlight-content {
   display: none;
 }
+
+.highlight-content ul {
+  margin-left: 2em;
+  margin-bottom: 2em;
+}
+
 
 .highlight-subheading:hover {
   background-color:#F55139;
@@ -522,5 +529,9 @@ nav a:first-child {
 
   #menu-icon {
       display: inline-block;
+  }
+
+  .timeline {
+    margin-left: 10px;
   }
 }
