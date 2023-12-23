@@ -97,14 +97,16 @@ nav a:first-child {
 }
 
 #menu-icon {
-  background: rgba(255, 255, 255, 0.2);
-  height: 45px;
-  width: 45px;
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 50px;
+  width: 50px;
   text-align: center;
-  border-radius: 100px;
   line-height: 60px;
+  border-radius: 100px;
+
   display: none;
 }
+
 
 #line {
   position: absolute;
@@ -533,5 +535,63 @@ nav a:first-child {
 
   .timeline {
     margin-left: 10px;
+  }
+}
+
+
+@media(max-width: 490px) {
+  .header-title {
+    width: 90%;
+    padding-left: 25px;
+  }
+
+  .header-title h1 {
+    font-size: 45px;
+    width: 100%;
+  }
+
+  .about-me-content {
+    text-align: center; 
+    width: 80%;
+  }
+
+  .about-me-content p {
+    font-size: 18px;
+    font-weight: 100;
+  }
+
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-bottom: 15px;
+  }
+
+  .timeline {
+    border: none;
+    width: 100%;
+  }
+
+  .timeline-subheader {
+    margin-left: 30px;
+    width: 85%;
+  }
+
+  .highlights {
+    width: 100%;
+  }
+
+  .highlight-subheading {
+    width: 100%;
+  }
+
+  .timeline-split {
+    margin-left: 30px;
+    overflow-x: scroll;
+  }
+
+  .card {
+    height: 350px;
+    width: 350px;
   }
 }
