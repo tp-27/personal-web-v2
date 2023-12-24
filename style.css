@@ -166,6 +166,7 @@ nav a:first-child {
   font-size: 15px;
   color: #F3F3F3;
   font-weight: 700;
+  line-height: 45px;
 }
 
 #resume:hover {
@@ -266,10 +267,6 @@ nav a:first-child {
   padding-bottom: 50px;
 }
 
-
-
-
-
 .highlights h3 {
   font-weight: 500;
 }
@@ -279,7 +276,7 @@ nav a:first-child {
   width: 100%;
   background-color:#09141a;
   border-radius: 20px;
-  /* border: 2px solid red; */
+  border: 2px solid red;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -300,6 +297,7 @@ nav a:first-child {
 
 .highlight-content {
   display: none;
+  width: 100%;
 }
 
 .highlight-content ul {
@@ -307,6 +305,19 @@ nav a:first-child {
   margin-bottom: 2em;
 }
 
+.highlight-content ul li {
+  color:#EBE7D9;
+}
+
+.highlight-content h4 {
+  font-size: 17px;
+}
+
+.highlight-content p {
+  padding-top: 5px;
+  font-size: 17px;
+  color:#EBE7D9;
+}
 
 .highlight-subheading:hover {
   background-color:#F55139;
@@ -434,38 +445,38 @@ nav a:first-child {
   justify-content: center;
   gap: 25px;
   padding-top: 50px;
+  margin-bottom: 100px;
 }
 
 .card {
-  height: 400px;
+  height: 100%;
   width: 400px;
   border-radius: 20px;
   background-color: white;
   border: none;
   overflow-y: hidden;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  /* border: 2px solid red; */
 }
 
 .card img {
+  position: relative;
   height: auto;
   width: 250px;
+  /* border: 2px solid red; */
 }
 
-.card-btns {
-  height: 30%;
+.card-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
   width: 100%;
-  background-color: #fff;
-}
+  /* border: 2px solid red; */
 
-.proj-content {
-  height: 500px;
-  width: 100%;
-  border-radius: 20px;
-  background-color:#09151c;
-  display: none;
 }
 
 #tent {
@@ -480,39 +491,42 @@ nav a:first-child {
   width: 400px;
 }
 
-.layer {
-  background: transparent;
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	transition: 0.5s;  
+.proj-btns {
+  height: auto;
+  display: flex;
+  gap: 10px;
+  justify-self: flex-end;
+  padding-top: 15px;
+  border-top: 1px solid grey;
+}
+
+.proj-btn {
   text-align: center;
+  height: 55px;
+  width: 170px;
+  background-color: #F55139;
+  border-radius: 20px;
+  border: none;
+  font-size: 15px;
+  color: #F3F3F3;
+  font-weight: 700;
+  line-height: 45px;
 }
 
-.layer:hover {
-	background:#ebe7d9d4;
+.preview {
+  background-color: #EBE7D9;
+  color:#F55139;
 }
 
-.layer h3{
-	width: 80%;
-	font-weight: 500;
-	color: black;
-	font-size: 26px;
-	bottom: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	position: absolute;
-	opacity: 0;
-	transition: 0.5s;
-  margin: auto;
+.preview:hover {
+  background-color: #c0bfb8;
 }
 
-.layer:hover h3 {
-	bottom: 49%;
-	opacity: 1;
-} 
+.github:hover {
+  background-color: #db4933;
+}
+
+
 
 /* 
 .card:hover {
