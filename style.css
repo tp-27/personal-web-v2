@@ -473,10 +473,9 @@ nav a:first-child {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70%;
+  height: 75%;
   width: 100%;
   /* border: 2px solid red; */
-
 }
 
 #tent {
@@ -487,7 +486,7 @@ nav a:first-child {
   background-color: #040571;
 }
 
-#nccer img {
+#nccer .card-img-container img {
   width: 400px;
 }
 
@@ -500,8 +499,14 @@ nav a:first-child {
   border-top: 1px solid grey;
 }
 
+
 .proj-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  gap: 10px;
+  padding-top: 5px;
   height: 55px;
   width: 170px;
   background-color: #F55139;
@@ -510,12 +515,21 @@ nav a:first-child {
   font-size: 15px;
   color: #F3F3F3;
   font-weight: 700;
-  line-height: 45px;
+}
+
+.btn-icon img {
+  height: auto;
+  width: 20px;
 }
 
 .preview {
   background-color: #EBE7D9;
   color:#F55139;
+}
+
+.preview img {
+  padding-top: 5px;;
+  width: 18px;
 }
 
 .preview:hover {
