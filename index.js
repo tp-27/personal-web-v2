@@ -1,4 +1,16 @@
+
+function showMenu() {
+    var menu = document.querySelector(".sidebar");
+    menu.style.display = "block";
+}
+
+function closeMenu() {
+    var menu = document.querySelector(".sidebar");
+    menu.style.display = "none";
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+
     // scroll animations
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -47,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const navObserver = new IntersectionObserver((entries) => {
         nav.classList.toggle("sticking", !entries[0].isIntersecting);
-        console.log(entries);
+        // console.log(entries);
     }); 
 
 
