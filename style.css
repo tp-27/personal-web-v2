@@ -220,7 +220,7 @@ nav a:first-child {
   margin-left: 590px;
   border-left: 3px solid rgba(255, 255, 255, 0.104);
   height: auto;
-  border-right: 2px solid red;
+  /* border-right: 2px solid red; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -377,8 +377,6 @@ nav a:first-child {
   background-color:#09151c;
   border-radius: 20px;
   overflow-y: hidden;
-
-  border: 2px solid blue;
 }
 
 .skills .code-icons div:hover {
