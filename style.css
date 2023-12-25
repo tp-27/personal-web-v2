@@ -376,7 +376,7 @@ nav a:first-child {
   min-width: 100px;
   background-color:#09151c;
   border-radius: 20px;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 .skills .code-icons div:hover {
