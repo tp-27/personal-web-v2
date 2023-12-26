@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     navObserver.observe(scrollWatcher);
 
+    
     const dropdownInfoBtn = document.querySelectorAll(".highlight-subheading");
         
     dropdownInfoBtn.forEach(function(dropdown) {
