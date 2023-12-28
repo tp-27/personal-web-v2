@@ -25,32 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const hiddenElements = document.querySelectorAll(".hidden");
     hiddenElements.forEach((el) => observer.observe(el)); // observe all hidden elements
 
-    var expCardHeader = document.querySelectorAll(".exp-card-header");
-
-    expCardHeader.forEach(function(header) {
-        header.addEventListener("click", function () {
-            const siblingElement = header.nextElementSibling; // get paragraph tag 
-            const display = siblingElement.style.display;
-
-            if (display === "none") {
-                siblingElement.style.display = "block"; // show paragraph
-                var expandArrow = header.querySelector(".expand-arrow");
-                expandArrow.style.display = "none"; // remove expand arrow
-
-                var collapseArrow = document.querySelector(".collapse-arrow");
-                collapseArrow.style.display = "block"; // show collapse arrow
-
-            } else {
-                siblingElement.style.display = "none"; // remove paragraph
-                var expandArrow = header.querySelector(".expand-arrow");
-                expandArrow.style.display = "block"; // show expand arrow
-
-                var collapseArrow = header.querySelector(".collapse-arrow");
-                collapseArrow.style.display = "none"; // remove collapse arrow
-            }
-        })
-    });
-
     const nav = document.querySelector("nav");
     const scrollWatcher = document.createElement('div');
 
@@ -65,11 +39,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     navObserver.observe(scrollWatcher);
 
-    
     const dropdownInfoBtn = document.querySelectorAll(".highlight-subheading");
         
     dropdownInfoBtn.forEach(function(dropdown) {
-        dropdown.addEventListener('click', function() {
+        dropdown.addEventListener('click', function(e) {
+            console.log(e);
             if (dropdown.style.height != "80px") {
                 dropdown.style.height = "80px";
                 dropdown.style.alignItems = "center";
@@ -87,8 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 content.style.paddingBottom = "25px";
 
             }
-
-
         });
     });
 });

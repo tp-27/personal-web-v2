@@ -291,7 +291,7 @@ nav a:first-child {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  /* border: 2px solid red; */
+  /* border: 2px solid red;  */
   /* padding-top: 25px; */
 
 }
@@ -631,6 +631,23 @@ nav a:first-child {
 .github:hover {
   background-color: #db4933;
 }
+
+#trip-planner {
+  /* border: 2px solid blue; */
+}
+
+#trip-planner .img-container {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+}
+
+#ribbon {
+  height: auto;
+  width: 250px;
+}
+
 
 
 
