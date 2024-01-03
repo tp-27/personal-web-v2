@@ -744,6 +744,11 @@ nav a:first-child {
     width: 100%;
   }
 
+  .about-me {
+    width: 100%;
+    margin-left: 0;
+  }
+
   .about-me-content {
     text-align: center; 
     width: 80%;
@@ -752,6 +757,8 @@ nav a:first-child {
   .about-me-content p {
     font-size: 18px;
     font-weight: 100;
+    border: 2px solid red;
+    width: 100%;
   }
 
   .education-header {
