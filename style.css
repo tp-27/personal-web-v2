@@ -537,11 +537,13 @@ nav a:first-child {
 }
 
 .card-img-container p {
-  height: 10%;
+  height: 20%;
   /* border: 2px solid red; */
   font-size: 13px;
   color:#a2a09b;
   justify-self: flex-end;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .img-container {
