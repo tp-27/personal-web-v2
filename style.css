@@ -555,6 +555,29 @@ nav a:first-child {
   align-items: center;
 }
 
+#rooms {
+  background-image: url('assets/bg2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+#rooms .card-img-container p {
+  color: white;
+}
+
+#rooms .img-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#rooms .img-container p {
+  height: auto;
+  color: white;
+  font-weight: 700;
+  font-size: 36px;
+}
+
 #aed h5 {
   top: 25px;
   position: relative;
@@ -635,10 +658,6 @@ nav a:first-child {
   background-color: #db4933;
 }
 
-#trip-planner {
-  /* border: 2px solid blue; */
-}
-
 #trip-planner .img-container {
   /* border: 2px solid red; */
   display: flex;
@@ -646,7 +665,7 @@ nav a:first-child {
   padding-top: 25px;
 }
 
-#ribbon {
+.ribbon {
   height: auto;
   width: 250px;
 }
